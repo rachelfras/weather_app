@@ -1,0 +1,151 @@
+body {
+  padding-top: 20px;
+  font-family: "Quicksand", sans-serif;
+}
+
+.today {
+  padding: 30px 20px;
+}
+
+.widget {
+  background: linear-gradient(to bottom right, #e4f4ff, #fff);
+  border: 2px solid #b0deff;
+  border-radius: 0 0 30px 30px;
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.2);
+  color: black;
+  padding: 0 0 10px 0;
+  margin: 0;
+  max-width: 600px;
+}
+
+.bar {
+  position: relative;
+  top: 0;
+  border: 0;
+}
+
+.current,
+.search {
+  border: 0;
+  width: 75px;
+}
+
+.current {
+  background: rgb(255, 217, 166);
+}
+
+.search {
+  background: #fff8a6;
+}
+
+.findCity {
+  border-bottom: 1px solid #b0deff;
+  border-radius: 0;
+  height: 50px;
+  line-height: 40px;
+}
+
+h1,
+.main {
+  display: inline;
+  font-size: 60px;
+  text-align: center;
+}
+
+h2 {
+  font-size: 22px;
+}
+
+.temperature {
+  background: #fff;
+  border: 0;
+  border-radius: 8px;
+  box-shadow: 6px 6px 6px rgba(0, 0, 0, 0.1);
+  font-family: "Montserrat", sans-serif;
+  margin-left: 20px;
+  padding: 5px;
+}
+
+#degree-sign {
+  font-size: 40px;
+  font-weight: 300;
+  position: relative;
+  bottom: 12px;
+}
+
+.main {
+  color: #ffc5a1;
+}
+
+hr {
+  margin: 0;
+}
+
+.temperature p {
+  padding: 0 10px;
+  margin: 0 0 5px;
+}
+
+.cityTime {
+  margin-top: 20px;
+  text-align: right;
+}
+
+.weekday {
+  color: #323232;
+  margin: 0 auto;
+}
+
+#measurement a {
+  color: #646464;
+  font-size: 14px;
+  margin: 26px;
+}
+
+.windRain {
+  margin: 5px 0 0 20px;
+  color: #323232;
+}
+
+.week {
+  margin: 0 auto;
+  width: 90%;
+}
+
+.future {
+  text-align: center;
+}
+
+.future i {
+  font-size: 24px;
+}
+
+.search:hover,
+.current:hover {
+  border-bottom: #b0deff;
+  color: #323232;
+}
+
+.search:hover {
+  background-color: #e4e1c4;
+}
+
+.current:hover {
+  background-color: #e5d6c3;
+}
+
+footer button {
+  background: linear-gradient(to top left, #d9e2e8, #fff);
+  border: 0;
+  border-radius: 8px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 10px;
+  height: 50px;
+  width: 65px;
+}
+
+footer button:hover {
+  background: #d9e2e8;
+  cursor: initial;
+  transition: all 550ms ease-in-out;
+}
