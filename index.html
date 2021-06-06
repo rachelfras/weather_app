@@ -13,142 +13,153 @@
     />
 
     <link rel="stylesheet" href="src/style.css" />
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500&family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet"> 
-    <script src="https://kit.fontawesome.com/d370c12370.js" crossorigin="anonymous"></script>
-		<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500&family=Quicksand:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/d370c12370.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
   </head>
   <body>
     <div class="container">
-
       <section class="widget">
+        <header class="bar">
+          <form id="search-form">
+            <div class="input-group">
+              <input
+                type="text"
+                class="form-control findCity enter"
+                id="enter-city"
+                placeholder="Enter city"
+                autofill
+              />
+              <button
+                class="btn btn-outline-secondary findCity search"
+                type="button"
+              >
+                Search
+              </button>
+              <button
+                class="btn btn-outline-secondary findCity current"
+                type="button"
+              >
+                Current
+              </button>
+            </div>
+          </form>
+        </header>
 
-      <header class="bar">  
-        <form id="search-form">
-          <div class="input-group">
-        
-           <input 
-              type="text" 
-              class="form-control findCity enter" 
-              id="enter-city"
-              placeholder="Enter city" 
-              autofill />
-            <button class="btn btn-outline-secondary findCity search" type="button">Search</button>
-            <button class="btn btn-outline-secondary findCity current" type="button">Current</button>
-          </div>
-        </form>
-      </header>
+        <section class="today">
+          <div class="row">
+            <div class="col temperature">
+              <div class="row">
+                <div class="col">
+                  <h1>
+                    <span id="big-temp">12</span
+                    ><span id="degree-sign">°C</span>
+                  </h1>
+                  <hr />
+                  <p>13° / 3°</p>
+                </div>
 
-      <section class="today">
+                <div class="col">
+                  <i class="fas fa-sun main"></i>
+                </div>
 
-      <div class="row">
-       <div class="col temperature">
-        <div class="row">
-
-          <div class="col">
-           <h1>
-            <span id="big-temp">12</span><span id="degree-sign">°C</span>
-           </h1> 
-           <hr/>        
-           <p>13° / 3°</p>
-          </div>
-
-          <div class="col">
-          <i class="fas fa-sun main"></i>
-          </div>  
-
-          <span class="tempOptions" id="measurement">
-            <a href="#" id="see-celsius">celsius</a>
-            <a href="#" id="see-faren">farenheit</a>
-          </span>
-       </div>
-      </div>
-
-      <div class="col cityTime">
-        <h2 id="searched-city">Edinburgh, Scotland</h2>
-
-          <div class="row weekday">
-            
-            <div class="col blank">
-
+                <span class="tempOptions" id="measurement">
+                  <a href="#" id="see-celsius">celsius</a>
+                  <a href="#" id="see-faren">farenheit</a>
+                </span>
+              </div>
             </div>
 
-            <div class="col">
-              <p id="weekday">Saturday</p>
-            </div>
+            <div class="col cityTime">
+              <h2 id="searched-city">Edinburgh, Scotland</h2>
 
-            <div class="col">
-              <p id="time">17:37</p>
+              <div class="row weekday">
+                <div class="col blank"></div>
+
+                <div class="col">
+                  <p id="weekday">Saturday</p>
+                </div>
+
+                <div class="col">
+                  <p id="time">17:37</p>
+                </div>
+              </div>
             </div>
           </div>
-          
-          
-      </div>
-      </div>
-      <div class="windRain">
-        <p>
-          Precipitation: 37%
-          <br />
-          Wind: 5km/h
-        </p>
-      </div>
+          <div class="windRain">
+            <p>
+              Precipitation: 37%
+              <br />
+              Wind: 5km/h
+            </p>
+          </div>
+        </section>
+        <footer class="week">
+          <div class="row">
+            <div class="col-2">
+              <button class="future">
+                Sun 11
+                <br />
+                <i class="fas fa-cloud-sun"></i>
+              </button>
+            </div>
 
+            <div class="col-2">
+              <button class="future">
+                Mon 14°
+                <br />
+                <i class="fas fa-cloud-sun"></i>
+              </button>
+            </div>
+
+            <div class="col-2">
+              <button class="future">
+                Tue 11°
+                <br />
+                <i class="fas fa-cloud"></i>
+              </button>
+            </div>
+
+            <div class="col-2">
+              <button class="future">
+                Wed 11°
+                <br />
+                <i class="fas fa-cloud"></i>
+              </button>
+            </div>
+
+            <div class="col-2">
+              <button class="future">
+                Thu 11°
+                <br />
+                <i class="fas fa-cloud"></i>
+              </button>
+            </div>
+
+            <div class="col-2">
+              <button class="future">
+                Fri 11°
+                <br />
+                <i class="fas fa-cloud-sun"></i>
+              </button>
+            </div>
+          </div>
+        </footer>
       </section>
-      <footer class="week">
 
-        <div class="row">
-          <div class="col-2">
-            <button class="future">
-              Sun 11
-              <br />
-            <i class="fas fa-cloud-sun"></i>
-            </button>
-          </div>
-
-          <div class="col-2">
-            <button class="future">
-              Mon 14°
-              <br />
-            <i class="fas fa-cloud-sun"></i>
-            </button>  
-          </div>
-
-          <div class="col-2">
-            <button class="future">
-            Tue 11°
-            <br />
-            <i class="fas fa-cloud"></i>
-            </button>
-          </div>
-
-          <div class="col-2">
-            <button class="future">
-            Wed 11°
-            <br />
-            <i class="fas fa-cloud"></i>
-            </button>  
-          </div>
-
-          <div class="col-2">
-            <button class="future">
-            Thu 11°
-            <br />
-            <i class="fas fa-cloud"></i>
-            </button>
-          </div>
-
-          <div class="col-2">
-            <button class="future">
-            Fri 11°
-            <br />
-            <i class="fas fa-cloud-sun"></i>
-            </button>  
-          </div>
-
-        </div>
-      
-      </footer>
-    
+      <div class="credit">
+        <a href="https://github.com/rachelfras/weather_app" class="git-link">
+          Open-source code
+        </a>
+        <p>by Rachel Fraser</p>
+      </div>
     </div>
 
     <script src="src/script.js"></script>

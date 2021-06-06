@@ -149,3 +149,14 @@ footer button:hover {
   cursor: initial;
   transition: all 550ms ease-in-out;
 }
+
+.credit {
+  font-size: 14px;
+  padding-top: 6px;
+  position: relative;
+  left: 28px;
+}
+
+.credit p {
+  display: inline;
+}
